@@ -1,0 +1,32 @@
+{
+  "name": "gridea",
+  "version": "0.8.2",
+  "private": true,
+  "description": "A static blog writing client. You can use it to record your life, mood, knowledge, notes and ideas...",
+  "homepage": "http://gridea.dev",
+  "license": "MIT",
+  "author": {
+    "name": "EryouHao",
+    "email": "eryouhao@gmail.com"
+  },
+  "repository": "https://github.com/getgridea/gridea",
+  "dependencies": {
+    "junk": "^2.1.0",
+    "markdown-it-footnote": "^3.0.1"
+  },
+  "main": "background.js",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
